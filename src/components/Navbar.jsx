@@ -26,21 +26,31 @@ const Navbar = () => {
           <AiOutlineMenu size={30} className="text-white" />
         )}
       </div>
-      <ul className="hidden md:flex gap-6 lg:gap-20 text-white">
+      <ul className="hidden md:flex gap-4 text-white">
         <li className="hover:text-accent hover:underline">
-          <a href="#">Home</a>
+          <a href="#" onClick={handleCloseMenu}>
+            Home
+          </a>
         </li>
         <li className="hover:text-accent hover:underline">
-          <a href="#about">About Us</a>
+          <a href="#about" onClick={handleCloseMenu}>
+            About Us
+          </a>
         </li>
         <li className="hover:text-accent hover:underline">
-          <a href="#programs">Programs</a>
+          <a href="#programs" onClick={handleCloseMenu}>
+            Programs
+          </a>
         </li>
         <li className="hover:text-accent hover:underline">
-          <a href="#activities">Activities</a>
+          <a href="#activities" onClick={handleCloseMenu}>
+            Activities
+          </a>
         </li>
         <li className="hover:text-accent hover:underline">
-          <a href="#contact">Contact</a>
+          <a to="#contact" onClick={handleCloseMenu}>
+            Contact
+          </a>
         </li>
       </ul>
       <button className="hidden md:block bg-accent text-primary py-2 px-4 rounded hover:bg-accent-dark transition-all duration-200">
@@ -48,14 +58,14 @@ const Navbar = () => {
       </button>
       {openMenu && (
         <div className="absolute top-[80px] right-0 w-full bg-primary border-black border-t border-b-2 flex flex-col text-[24px] items-center md:hidden menuSlideIn">
-          <ul className="flex flex-col items-center gap-10 py-10">
+          <ul className="flex flex-col items-center gap-4 py-4">
             <li className="hover:text-accent hover:underline">
               <a href="#" onClick={handleCloseMenu}>
                 Home
               </a>
             </li>
             <li className="hover:text-accent hover:underline">
-              <a href="#about" onClick={handleCloseMenu}>
+              <a to="#about" onClick={handleCloseMenu}>
                 About Us
               </a>
             </li>

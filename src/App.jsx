@@ -4,13 +4,17 @@ import Hero from "./components/Hero";
 import About from "./components/About";
 import Footer from "./components/Footer";
 import "./index.css";
+import Programs from "./components/Programs";
+import Activities from "./components/Activities";
 
 const App = () => {
   return (
     <div>
       <Navbar />
-        <Hero />
-        <About />
+      <Hero />
+      <About />
+      <Programs />
+      <Activities />
       <Footer />
     </div>
   );

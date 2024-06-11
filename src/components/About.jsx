@@ -11,7 +11,7 @@ const AboutUs = () => {
       <div
         className="max-w-6xl mx-auto flex flex-col md:flex-row justify-center items-center text-center gap-14"
         data-aos="zoom-in"
-        data-aos-delay="50"
+        data-aos-delay="100"
         data-aos-duration="500"
         data-aos-easing="ease-in-out"
         data-aos-once="true"

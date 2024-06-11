@@ -10,7 +10,7 @@ const Hero = () => {
     <div
       className="w-full pt-24 flex flex-col px-2"
       data-aos="zoom-in"
-      data-aos-delay="50"
+      data-aos-delay="100"
       data-aos-duration="500"
       data-aos-easing="ease-in-out"
       data-aos-once="true"

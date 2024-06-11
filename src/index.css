@@ -5,6 +5,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html{
+  scroll-behavior: smooth;
+}
+
 .abril {
   font-family: "Abril Fatface", serif;
   font-style: normal;
