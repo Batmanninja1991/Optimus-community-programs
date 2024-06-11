@@ -7,7 +7,7 @@ AOS.init();
 
 const AboutUs = () => {
   return (
-    <div id="about" className="w-full bg-gray-100 py-12 px-4">
+    <div id="about" className="w-full bg-gray-100 p-4">
       <div
         className="max-w-6xl mx-auto flex flex-col md:flex-row justify-center items-center text-center gap-14"
         data-aos="zoom-in"
@@ -23,7 +23,7 @@ const AboutUs = () => {
             className="w-full rounded-lg shadow-lg"
           />
         </div>
-        <div className="md:w-1/2 p-4">
+        <div className="md:w-1/2 px-4">
           <h2 className="text-3xl md:text-4xl text-primary font-bold mb-6">
             About Optimus Community Programs
           </h2>
