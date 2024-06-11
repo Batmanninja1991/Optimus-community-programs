@@ -10,6 +10,7 @@ AOS.init();
 const Footer = () => {
   return (
     <div
+      id="contact"
       className="w-full bg-primary"
       data-aos="zoom-in"
       data-aos-delay="50"
