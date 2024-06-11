@@ -20,12 +20,12 @@ const Hero = () => {
         style={{ backgroundImage: `url(${heroImg})` }}
       >
         <div className="flex flex-col justify-center text-right gap-2 p-4 md:gap-4 md:pr-4 lg:pt-10">
-          <h1 className="abril text-4xl text-primary">
+          <h1 className="abril text-4xl md:text-5xl text-primary">
             Optimus
             <br className="lg:hidden" /> Community
             <br className="md:hidden" /> Programs
           </h1>
-          <p className="lato text-lg text-text">
+          <p className="lato md:text-lg text-text">
             Empowering Lives
             <br className="lg:hidden" /> Through Specialized{" "}
             <br className="md:hidden" />
