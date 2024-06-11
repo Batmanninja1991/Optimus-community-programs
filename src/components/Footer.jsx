@@ -1,0 +1,81 @@
+import React from "react";
+import logo from "../assets/OPTIMUS Community Programs-5.jpg";
+import { FaFacebook, FaLinkedin } from "react-icons/fa";
+import { AiOutlineMail } from "react-icons/ai";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+AOS.init();
+
+const Footer = () => {
+  return (
+    <div
+      className="w-full bg-primary"
+      data-aos="zoom-in"
+      data-aos-delay="50"
+      data-aos-duration="500"
+      data-aos-easing="ease-in-out"
+      data-aos-once="true"
+    >
+      <hr className="border-2 border-white" />
+      <div className="flex gap-8 md:gap-24 items-center p-6">
+        <div className="flex justify-center md:justify-start">
+          <img src={logo} alt="Logo" className="w-[200px] rounded" />
+        </div>
+        <div className="flex flex-col items-center md:items-start gap-8">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.facebook.com/profile.php?id=61560887934903"
+          >
+            <FaFacebook
+              size={40}
+              className="text-white transition-all hover:scale-125"
+            />
+          </a>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://www.linkedin.com/in/erick-ruiz-772708312/?"
+          >
+            <FaLinkedin
+              size={40}
+              className="text-white transition-all hover:scale-125"
+            />
+          </a>
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="mailto:OptimusCommunityPrograms@gmail.com"
+          >
+            <AiOutlineMail
+              size={40}
+              className="text-white transition-all hover:scale-125"
+            />
+          </a>
+        </div>
+        <div className="">
+          <ul className="flex flex-col md:grid md:grid-cols-3 gap-4 md:gap-8 px-4">
+            <li className="hover:text-accent hover:underline md:px-10 lg:text-xl">
+              <a href="#">Home</a>
+            </li>
+            <li className="hover:text-accent hover:underline md:px-10 lg:text-xl">
+              <a href="#about">About Us</a>
+            </li>
+            <li className="hover:text-accent hover:underline md:px-10 lg:text-xl">
+              <a href="#programs">Programs</a>
+            </li>
+            <li className="hover:text-accent hover:underline md:px-10 lg:text-xl">
+              <a href="#activities">Activities</a>
+            </li>
+            <li className="hover:text-accent hover:underline md:px-10 lg:text-xl">
+              <a href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Footer;
