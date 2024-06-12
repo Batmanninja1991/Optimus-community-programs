@@ -2,26 +2,25 @@ import React from "react";
 import emailjs from "emailjs-com";
 
 const Contact = () => {
-  const handleSubmit = (e) => {
-    e.preventDefault();
+  const [formData, setFormData] = useState({
+    name: "",
+    number: "",
+    email: "",
+    service: "",
+    message: "",
+  });
 
-    emailjs
-      .sendForm
-      //"service_xqijs2p",
-      //"template_thzg7pi",
-      //e.target,
-      //"WnKNRLAWCizDV126m"
-      ()
-      .then(
-        (result) => {
-          console.log("Email successfully sent!", result.text);
-          alert("Message sent successfully!");
-        },
-        (error) => {
-          console.log("Failed to send email:", error.text);
-          alert("An error occurred, please try again.");
-        }
-      );
+  const generateMailtoLink = () => {
+    const subject = encodeURIComponent(`New Application from ${formData.name}`);
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\nPhone: ${formData.number}\nEmail: ${formData.email}\nService: ${formData.service}\n\n ${formData.message}`
+    );
+    return `mailto:optimuscommunityprograms@gmail.com?subject=${subject}&body=${body}`;
+  };
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    window.location.href = generateMailtoLink();
   };
 
   return (
@@ -31,7 +30,7 @@ const Contact = () => {
     >
       <div className="bg-white p-8 rounded-lg shadow-lg w-full h-full md:w-2/3 md:h-2/3">
         <h2 className="text-2xl font-bold mb-4 text-center">Contact Us</h2>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleFormSubmit}>
           <div className="mb-4">
             <label
               className="block text-gray-700 text-sm font-bold mb-2"
