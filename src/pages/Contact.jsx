@@ -29,7 +29,7 @@ const Contact = () => {
       id="contact"
       className="w-full h-screen mt-24 flex items-center justify-center bg-gray-100 p-6"
     >
-      <div className="bg-white p-8 rounded-lg shadow-lg w-2/3 h-2/3">
+      <div className="bg-white p-8 rounded-lg shadow-lg w-full h-full md:w-2/3 md:h-2/3">
         <h2 className="text-2xl font-bold mb-4 text-center">Contact Us</h2>
         <form onSubmit={handleSubmit}>
           <div className="mb-4">
