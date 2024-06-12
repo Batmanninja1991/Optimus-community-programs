@@ -1,8 +1,4 @@
 import React from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
-
-AOS.init();
 
 const programs = [
   {
@@ -37,11 +33,6 @@ const Programs = () => {
     <div id="programs" className="w-full py-12 px-4 bg-gray-100">
       <div
         className="max-w-6xl mx-auto"
-        data-aos="zoom-in"
-        data-aos-delay="100"
-        data-aos-duration="500"
-        data-aos-easing="ease-in-out"
-        data-aos-once="true"
       >
         <h2 className="text-3xl md:text-4xl text-primary font-bold mb-8 text-center">
           Our Programs

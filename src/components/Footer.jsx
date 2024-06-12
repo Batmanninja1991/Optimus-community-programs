@@ -2,22 +2,10 @@ import React from "react";
 import logo from "../assets/OPTIMUS Community Programs-5.jpg";
 import { FaFacebook, FaLinkedin } from "react-icons/fa";
 import { AiOutlineMail } from "react-icons/ai";
-import AOS from "aos";
-import "aos/dist/aos.css";
-
-AOS.init();
 
 const Footer = () => {
   return (
-    <div
-      id="contact"
-      className="w-full bg-primary"
-      data-aos="zoom-in"
-      data-aos-delay="50"
-      data-aos-duration="500"
-      data-aos-easing="ease-in-out"
-      data-aos-once="true"
-    >
+    <div id="contact" className="w-full bg-primary">
       <hr className="border-2 border-white" />
       <div className="flex gap-8 md:gap-24 items-center p-6">
         <div className="flex justify-center md:justify-start">

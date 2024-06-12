@@ -1,21 +1,10 @@
 import React from "react";
 import aboutImg from "../assets/fatherSon.jpg";
-import AOS from "aos";
-import "aos/dist/aos.css";
-
-AOS.init();
 
 const AboutUs = () => {
   return (
     <div id="about" className="w-full bg-gray-100 p-4">
-      <div
-        className="max-w-6xl mx-auto flex flex-col md:flex-row justify-center items-center text-center gap-14"
-        data-aos="zoom-in"
-        data-aos-delay="100"
-        data-aos-duration="500"
-        data-aos-easing="ease-in-out"
-        data-aos-once="true"
-      >
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-center items-center text-center gap-14">
         <div className="md:w-1/2">
           <img
             src={aboutImg}

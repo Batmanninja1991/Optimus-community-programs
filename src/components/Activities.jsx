@@ -1,53 +1,9 @@
 import React from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
-
-AOS.init();
-
-const activities = [
-  {
-    title: "Arts and Crafts",
-    description:
-      "Engage in creative projects that include painting, drawing, sculpting, and more. Our arts and crafts sessions are designed to foster creativity and improve fine motor skills.",
-  },
-  {
-    title: "Sports and Fitness",
-    description:
-      "Participate in a variety of sports and fitness activities such as basketball, soccer, yoga, and aerobics. These activities promote physical health and teamwork.",
-  },
-  {
-    title: "Music and Dance",
-    description:
-      "Explore your musical talents with our music and dance programs. We offer lessons in various instruments, singing, and different styles of dance.",
-  },
-  {
-    title: "Outdoor Adventures",
-    description:
-      "Enjoy the great outdoors with activities like hiking, picnicking, and nature walks. Our outdoor adventures encourage physical activity and appreciation for nature.",
-  },
-  {
-    title: "Cooking Classes",
-    description:
-      "Learn to cook delicious and nutritious meals in our cooking classes. These sessions teach valuable life skills and promote healthy eating habits.",
-  },
-  {
-    title: "Community Volunteering",
-    description:
-      "Give back to the community through various volunteering opportunities. Our programs foster a sense of responsibility and community engagement.",
-  },
-];
 
 const Activities = () => {
   return (
     <div id="activities" className="w-full py-12 px-4 bg-gray-100">
-      <div
-        className="max-w-6xl mx-auto"
-        data-aos="zoom-in"
-        data-aos-delay="100"
-        data-aos-duration="500"
-        data-aos-easing="ease-in-out"
-        data-aos-once="true"
-      >
+      <div className="max-w-6xl mx-auto">
         <h2 className="text-3xl md:text-4xl text-primary font-bold mb-8 text-center">
           Our Activities
         </h2>
