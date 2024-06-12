@@ -2,10 +2,11 @@ import React from "react";
 import logo from "../assets/OPTIMUS Community Programs-5.jpg";
 import { FaFacebook, FaLinkedin } from "react-icons/fa";
 import { AiOutlineMail } from "react-icons/ai";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div id="contact" className="w-full bg-primary">
+    <div className="w-full bg-primary">
       <hr className="border-2 border-white" />
       <div className="flex gap-8 md:gap-24 items-center p-6">
         <div className="flex justify-center md:justify-start">
@@ -46,19 +47,19 @@ const Footer = () => {
         <div className="">
           <ul className="flex flex-col md:grid md:grid-cols-3 gap-4 md:gap-8 px-4">
             <li className="hover:text-accent hover:underline md:px-10 lg:text-xl">
-              <a href="#">Home</a>
+              <Link to="/">Home</Link>
             </li>
             <li className="hover:text-accent hover:underline md:px-10 lg:text-xl">
-              <a href="#about">About Us</a>
+              <Link to="/about">About Us</Link>
             </li>
             <li className="hover:text-accent hover:underline md:px-10 lg:text-xl">
-              <a href="#programs">Programs</a>
+              <Link to="/programs">Programs</Link>
             </li>
             <li className="hover:text-accent hover:underline md:px-10 lg:text-xl">
-              <a href="#activities">Activities</a>
+              <Link to="/activities">Activities</Link>
             </li>
             <li className="hover:text-accent hover:underline md:px-10 lg:text-xl">
-              <a href="#contact">Contact</a>
+              <Link to="/contact">Contact</Link>
             </li>
           </ul>
         </div>

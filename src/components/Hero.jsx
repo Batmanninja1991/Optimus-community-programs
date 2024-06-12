@@ -1,31 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import heroImg from "../assets/coupleSitting.jpg";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import Modal from "./Modal";
-
-AOS.init();
+import missionImg from "../assets/friendsGroup.jpg";
+import servicesImg from "../assets/holdingHands.jpg";
 
 const Hero = () => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const handleGetStarted = () => {
-    setIsModalOpen(true);
-  };
-
-  const handleCloseModal = () => {
-    setIsModalOpen(false);
-  };
-
   return (
-    <div
-      className="w-full pt-24 flex flex-col px-2"
-      data-aos="zoom-in"
-      data-aos-delay="100"
-      data-aos-duration="500"
-      data-aos-easing="ease-in-out"
-      data-aos-once="true"
-    >
+    <div className="w-full pt-24 flex flex-col p-2">
+      {/* Hero Section */}
       <div
         className="bg-center bg-cover min-h-[550px] rounded"
         style={{ backgroundImage: `url(${heroImg})` }}
@@ -44,13 +25,52 @@ const Hero = () => {
           </p>
         </div>
       </div>
-      <button
-        className="bg-accent-dark text-xl font-bold text-primary-dark tracking-widest p-6 rounded mt-2 mb-10 hover:bg-accent transition-all duration-200"
-        onClick={handleGetStarted}
-      >
-        Get Help Today
-      </button>
-      <Modal isOpen={isModalOpen} onClose={handleCloseModal} />
+
+      {/* Mission Statement Section */}
+      <div className="w-full py-12 flex flex-col items-center bg-gray-100">
+        <div className="max-w-4xl flex flex-col md:flex-row items-center gap-8 px-4">
+          <img
+            src={missionImg}
+            alt="Mission"
+            className="w-full md:w-1/2 rounded-lg shadow-lg"
+          />
+          <div className="md:w-1/2 text-center md:text-left">
+            <h2 className="abril text-3xl md:text-4xl text-primary mb-4">
+              Our Mission
+            </h2>
+            <p className="lato text-lg text-gray-700">
+              At Optimus Community Programs, our mission is to provide
+              exceptional care and support to individuals with intellectual and
+              developmental disabilities. We strive to foster independence,
+              growth, and a higher quality of life through comprehensive
+              behavioral health services.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* Key Services Section */}
+      <div className="w-full p-12 flex flex-col items-center bg-white">
+        <div className="max-w-4xl flex flex-col md:flex-row-reverse items-center gap-8">
+          <img
+            src={servicesImg}
+            alt="Services"
+            className="w-full md:w-1/2 rounded-lg shadow-lg"
+          />
+          <div className="md:w-1/2 text-center md:text-left">
+            <h2 className="abril text-3xl md:text-4xl text-primary mb-4">
+              Our Services
+            </h2>
+            <ul className="lato text-lg text-gray-700 list-disc list-inside">
+              <li>Residential Services</li>
+              <li>Day Programs</li>
+              <li>Behavioral Support</li>
+              <li>Recreational Activities</li>
+              <li>Educational Support</li>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

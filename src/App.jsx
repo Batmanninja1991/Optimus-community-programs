@@ -1,20 +1,26 @@
 import React from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
-import About from "./components/About";
 import Footer from "./components/Footer";
+import About from "./pages/About";
+import Programs from "./pages/Programs";
+import Activities from "./pages/Activities";
+import Contact from "./pages/Contact";
+import { Routes, Route } from "react-router-dom";
 import "./index.css";
-import Programs from "./components/Programs";
-import Activities from "./components/Activities";
 
 const App = () => {
   return (
     <div>
       <Navbar />
-      <Hero />
-      <About />
-      <Programs />
-      <Activities />
+      <Routes>
+        <Route index element={<Hero />} />
+        <Route path="/Optimus-community-programs/" element={<Hero />} />
+        <Route index path="/about" element={<About />} />
+        <Route path="/programs" element={<Programs />} />
+        <Route path="/activities" element={<Activities />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
       <Footer />
     </div>
   );

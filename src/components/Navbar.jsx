@@ -4,6 +4,7 @@ import {
   AiOutlineClose,
   AiOutlineArrowUp,
 } from "react-icons/ai";
+import { Link } from "react-router-dom";
 import Modal from "./Modal";
 
 const Navbar = () => {
@@ -47,29 +48,29 @@ const Navbar = () => {
       </div>
       <ul className="hidden md:flex gap-4 text-white">
         <li className="hover:text-accent hover:underline">
-          <a href="#" onClick={handleCloseMenu}>
+          <Link to="/" onClick={handleCloseMenu}>
             Home
-          </a>
+          </Link>
         </li>
         <li className="hover:text-accent hover:underline">
-          <a href="#about" onClick={handleCloseMenu}>
+          <Link to="/about" onClick={handleCloseMenu}>
             About Us
-          </a>
+          </Link>
         </li>
         <li className="hover:text-accent hover:underline">
-          <a href="#programs" onClick={handleCloseMenu}>
+          <Link to="/programs" onClick={handleCloseMenu}>
             Programs
-          </a>
+          </Link>
         </li>
         <li className="hover:text-accent hover:underline">
-          <a href="#activities" onClick={handleCloseMenu}>
+          <Link to="/activities" onClick={handleCloseMenu}>
             Activities
-          </a>
+          </Link>
         </li>
         <li className="hover:text-accent hover:underline">
-          <a href="#contact" onClick={handleCloseMenu}>
+          <Link to="/contact" onClick={handleCloseMenu}>
             Contact
-          </a>
+          </Link>
         </li>
       </ul>
       <button
@@ -82,29 +83,29 @@ const Navbar = () => {
         <div className="absolute top-[80px] right-0 w-full bg-primary border-black border-t border-b-2 flex flex-col text-[24px] items-center md:hidden menuSlideIn">
           <ul className="flex flex-col items-center gap-4 py-4">
             <li className="hover:text-accent hover:underline">
-              <a href="#" onClick={handleCloseMenu}>
+              <Link to="/" onClick={handleCloseMenu}>
                 Home
-              </a>
+              </Link>
             </li>
             <li className="hover:text-accent hover:underline">
-              <a href="#about" onClick={handleCloseMenu}>
+              <Link to="/about" onClick={handleCloseMenu}>
                 About Us
-              </a>
+              </Link>
             </li>
             <li className="hover:text-accent hover:underline">
-              <a href="#programs" onClick={handleCloseMenu}>
+              <Link to="/programs" onClick={handleCloseMenu}>
                 Programs
-              </a>
+              </Link>
             </li>
             <li className="hover:text-accent hover:underline">
-              <a href="#activities" onClick={handleCloseMenu}>
+              <Link to="/activities" onClick={handleCloseMenu}>
                 Activities
-              </a>
+              </Link>
             </li>
             <li className="hover:text-accent hover:underline">
-              <a href="#contact" onClick={handleCloseMenu}>
+              <Link to="/contact" onClick={handleCloseMenu}>
                 Contact
-              </a>
+              </Link>
             </li>
           </ul>
           <button
