@@ -15,22 +15,25 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route index element={<Hero />} />
-        <Route path="/Optimus-community-programs/" element={<Hero />} />
+        <Route
+          path="https://batmanninja1991.github.io/Optimus-community-programs/"
+          element={<Hero />}
+        />
         <Route
           index
-          path="/Optimus-community-programs/about"
+          path="https://batmanninja1991.github.io/Optimus-community-programs/about"
           element={<About />}
         />
         <Route
-          path="/Optimus-community-programs/programs"
+          path="https://batmanninja1991.github.io/Optimus-community-programs/programs"
           element={<Programs />}
         />
         <Route
-          path="/Optimus-community-programs/activities"
+          path="https://batmanninja1991.github.io/Optimus-community-programs/activities"
           element={<Activities />}
         />
         <Route
-          path="/Optimus-community-programs/contact"
+          path="https://batmanninja1991.github.io/Optimus-community-programs/contact"
           element={<Contact />}
         />
       </Routes>

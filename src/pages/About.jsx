@@ -1,7 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
 import aboutImg from "../assets/fatherSon.jpg";
 
 const AboutUs = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div id="about" className="w-full pt-24 bg-gray-100 p-4">
       <div className="mx-auto flex flex-col justify-center items-center text-center gap-14">

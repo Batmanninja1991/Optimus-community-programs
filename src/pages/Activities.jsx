@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 const activities = [
   {
@@ -34,6 +34,10 @@ const activities = [
 ];
 
 const Activities = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div id="activities" className="w-full pt-24 py-12 px-4 bg-gray-100">
       <div className="max-w-6xl mx-auto">

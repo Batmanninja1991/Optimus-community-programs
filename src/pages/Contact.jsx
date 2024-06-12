@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -10,6 +10,10 @@ const Contact = () => {
   });
 
   const generateMailtoLink = () => {
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
+    
     const subject = encodeURIComponent(`New Application from ${formData.name}`);
     const body = encodeURIComponent(
       `Name: ${formData.name}\nPhone: ${formData.number}\nEmail: ${formData.email}\nService: ${formData.service}\n\n ${formData.message}`
