@@ -16,10 +16,23 @@ const App = () => {
       <Routes>
         <Route index element={<Hero />} />
         <Route path="/Optimus-community-programs/" element={<Hero />} />
-        <Route index path="/about" element={<About />} />
-        <Route path="/programs" element={<Programs />} />
-        <Route path="/activities" element={<Activities />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route
+          index
+          path="/Optimus-community-programs/about"
+          element={<About />}
+        />
+        <Route
+          path="/Optimus-community-programs/programs"
+          element={<Programs />}
+        />
+        <Route
+          path="/Optimus-community-programs/activities"
+          element={<Activities />}
+        />
+        <Route
+          path="/Optimus-community-programs/contact"
+          element={<Contact />}
+        />
       </Routes>
       <Footer />
     </div>
