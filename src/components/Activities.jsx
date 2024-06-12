@@ -1,5 +1,38 @@
 import React from "react";
 
+const activities = [
+  {
+    title: "Arts and Crafts",
+    description:
+      "Engage in creative projects that include painting, drawing, sculpting, and more. Our arts and crafts sessions are designed to foster creativity and improve fine motor skills.",
+  },
+  {
+    title: "Sports and Fitness",
+    description:
+      "Participate in a variety of sports and fitness activities such as basketball, soccer, yoga, and aerobics. These activities promote physical health and teamwork.",
+  },
+  {
+    title: "Music and Dance",
+    description:
+      "Explore your musical talents with our music and dance programs. We offer lessons in various instruments, singing, and different styles of dance.",
+  },
+  {
+    title: "Outdoor Adventures",
+    description:
+      "Enjoy the great outdoors with activities like hiking, picnicking, and nature walks. Our outdoor adventures encourage physical activity and appreciation for nature.",
+  },
+  {
+    title: "Cooking Classes",
+    description:
+      "Learn to cook delicious and nutritious meals in our cooking classes. These sessions teach valuable life skills and promote healthy eating habits.",
+  },
+  {
+    title: "Community Volunteering",
+    description:
+      "Give back to the community through various volunteering opportunities. Our programs foster a sense of responsibility and community engagement.",
+  },
+];
+
 const Activities = () => {
   return (
     <div id="activities" className="w-full py-12 px-4 bg-gray-100">
