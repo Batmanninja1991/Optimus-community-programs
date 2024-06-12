@@ -1,11 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import heroImg from "../assets/coupleSitting.jpg";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Modal from "./Modal";
 
 AOS.init();
 
 const Hero = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleGetStarted = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <div
       className="w-full pt-24 flex flex-col px-2"
@@ -33,9 +44,13 @@ const Hero = () => {
           </p>
         </div>
       </div>
-      <button className="bg-accent-dark text-xl font-bold text-primary-dark tracking-widest p-6 rounded mt-2 mb-10 hover:bg-accent transition-all duration-200">
+      <button
+        className="bg-accent-dark text-xl font-bold text-primary-dark tracking-widest p-6 rounded mt-2 mb-10 hover:bg-accent transition-all duration-200"
+        onClick={handleGetStarted}
+      >
         Get Help Today
       </button>
+      <Modal isOpen={isModalOpen} onClose={handleCloseModal} />
     </div>
   );
 };

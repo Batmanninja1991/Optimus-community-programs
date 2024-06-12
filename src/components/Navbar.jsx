@@ -1,8 +1,14 @@
 import React, { useState } from "react";
-import { AiOutlineMenu, AiOutlineClose } from "react-icons/ai";
+import {
+  AiOutlineMenu,
+  AiOutlineClose,
+  AiOutlineArrowUp,
+} from "react-icons/ai";
+import Modal from "./Modal";
 
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleClick = () => {
     setOpenMenu(!openMenu);
@@ -12,6 +18,14 @@ const Navbar = () => {
     setOpenMenu(false);
   };
 
+  const handleGetStarted = () => {
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
   return (
     <div className="w-full h-[80px] bg-primary flex items-center text-center justify-between px-4 md:px-8 shadow-lg z-50 fixed top-0">
       <div className="abril text-white text-2xl">
@@ -19,6 +33,11 @@ const Navbar = () => {
         <br />
         Community Programs
       </div>
+      <a href="#">
+        <div className="fixed bottom-0 right-0 bg-primary-dark w-18 h-18 flex flex-col justify-center items-center p-3">
+          <AiOutlineArrowUp size={30} className="text-white" />
+        </div>
+      </a>
       <div className="md:hidden" onClick={handleClick}>
         {openMenu ? (
           <AiOutlineClose size={30} className="text-white" />
@@ -48,12 +67,15 @@ const Navbar = () => {
           </a>
         </li>
         <li className="hover:text-accent hover:underline">
-          <a to="#contact" onClick={handleCloseMenu}>
+          <a href="#contact" onClick={handleCloseMenu}>
             Contact
           </a>
         </li>
       </ul>
-      <button className="hidden md:block bg-accent text-primary py-2 px-4 rounded hover:bg-accent-dark transition-all duration-200">
+      <button
+        className="hidden md:block bg-accent text-primary py-2 px-4 rounded hover:bg-accent-dark transition-all duration-200"
+        onClick={handleGetStarted}
+      >
         Get Started
       </button>
       {openMenu && (
@@ -65,7 +87,7 @@ const Navbar = () => {
               </a>
             </li>
             <li className="hover:text-accent hover:underline">
-              <a to="#about" onClick={handleCloseMenu}>
+              <a href="#about" onClick={handleCloseMenu}>
                 About Us
               </a>
             </li>
@@ -85,11 +107,15 @@ const Navbar = () => {
               </a>
             </li>
           </ul>
-          <button className="bg-accent-dark text-primary-dark py-4 px-4 rounded mb-10 hover:bg-accent transition-all duration-200">
+          <button
+            className="bg-accent-dark text-primary-dark py-4 px-4 rounded mb-10 hover:bg-accent transition-all duration-200"
+            onClick={handleGetStarted}
+          >
             Get Started
           </button>
         </div>
       )}
+      <Modal isOpen={isModalOpen} onClose={handleCloseModal} />
     </div>
   );
 };
