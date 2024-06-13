@@ -11,7 +11,7 @@ import "./index.css";
 
 const App = () => {
   return (
-    <Router basename="/Optimus-community-programs">
+    <div>
       <Navbar />
       <Routes>
         <Route index element={<Hero />} />
