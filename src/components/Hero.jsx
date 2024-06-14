@@ -11,7 +11,7 @@ const Hero = () => {
         className="bg-center bg-cover min-h-[550px] rounded"
         style={{ backgroundImage: `url(${heroImg})` }}
       >
-        <div className="flex flex-col justify-center text-right gap-2 p-4 md:gap-4 md:pr-4 lg:pt-10">
+        <div className="flex flex-col justify-center text-right gap-2 p-4 md:gap-4 md:pr-4 lg:pt-10 animate-fade-in-down">
           <h1 className="abril text-4xl md:text-5xl text-primary">
             Optimus
             <br className="lg:hidden" /> Community
