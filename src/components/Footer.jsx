@@ -45,7 +45,7 @@ const Footer = () => {
           </a>
         </div>
         <div className="">
-          <ul className="flex flex-col md:grid md:grid-cols-3 gap-4 md:gap-8 px-4">
+          <ul className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-8 px-4">
             <li className="hover:text-accent hover:underline md:px-10 lg:text-xl">
               <Link to="/">Home</Link>
             </li>
