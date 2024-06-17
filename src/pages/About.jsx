@@ -9,14 +9,14 @@ const AboutUs = () => {
   return (
     <div id="about" className="w-full pt-24 bg-gray-100 p-4">
       <div className="mx-auto flex flex-col justify-center items-center text-center gap-14">
-        <div className="md:w-full">
+        <div className="md:w-full flex justify-center">
           <img
             src={aboutImg}
             alt="About Us"
-            className="w-full rounded-lg shadow-lg"
+            className="w-1/2 rounded-lg shadow-lg"
           />
         </div>
-        <div className="px-4">
+        <div className="flex flex-col justify-center items-center lg:w-2/3 px-4">
           <h2 className="text-3xl md:text-4xl text-primary font-bold mb-6">
             About Optimus Community Programs
           </h2>
