@@ -46,7 +46,7 @@ const Navbar = () => {
           <AiOutlineMenu size={30} className="text-white" />
         )}
       </div>
-      <ul className="hidden md:flex gap-4 text-white">
+      <ul className="hidden md:flex gap-4 xl:gap-20 xl:text-lg text-white">
         <li className="hover:text-accent hover:underline">
           <Link to="/" onClick={handleCloseMenu}>
             Home
@@ -80,8 +80,8 @@ const Navbar = () => {
         Get Started
       </button>
       {openMenu && (
-        <div className="absolute top-[80px] right-0 w-full bg-primary border-black border-t border-b-2 flex flex-col text-[24px] items-center md:hidden menuSlideIn">
-          <ul className="flex flex-col items-center gap-4 py-4">
+        <div className="absolute top-[80px] right-0 w-full h-screen bg-primary border-black border-t border-b-2 flex flex-col gap-4 text-[24px] items-center md:hidden menuSlideIn">
+          <ul className="flex flex-col items-center gap-16 py-4">
             <li className="hover:text-accent hover:underline">
               <Link to="/" onClick={handleCloseMenu}>
                 Home

@@ -13,7 +13,7 @@ const AboutUs = () => {
           <img
             src={aboutImg}
             alt="About Us"
-            className="w-1/2 rounded-lg shadow-lg"
+            className="w-full md:w-2/3 lg:w-1/2 rounded-lg shadow-lg"
           />
         </div>
         <div className="flex flex-col justify-center items-center lg:w-2/3 px-4">

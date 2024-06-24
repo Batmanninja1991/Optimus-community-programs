@@ -4,11 +4,15 @@ import missionImg from "../assets/friendsGroup.jpg";
 import servicesImg from "../assets/holdingHands.jpg";
 
 const Hero = () => {
+  const handleButtonClick = () => {
+    window.location.href = "https://donationwebsite.com";
+  };
+
   return (
     <div className="w-full pt-24 flex flex-col p-2">
       {/* Hero Section */}
       <div
-        className="bg-center bg-cover min-h-[550px] rounded"
+        className="bg-center h-[750px] bg-cover rounded"
         style={{ backgroundImage: `url(${heroImg})` }}
       >
         <div className="flex flex-col justify-center text-right gap-2 p-4 md:gap-4 md:pr-4 lg:pt-10 animate-fade-in-down">
@@ -26,9 +30,27 @@ const Hero = () => {
         </div>
       </div>
 
+      {/** Donation Section */}
+      <div className="bg-blue-900 h-[300px] flex justify-center items-center my-6 p-6 shadow-lg">
+        <div className="text-center">
+          <h1 className="text-white text-4xl mb-4 font-semibold">
+            Your support is crucial to our mission.
+          </h1>
+          <p className="text-white text-lg mb-6">
+            Every contribution helps us continue our work and make a difference.
+          </p>
+          <button
+            className="bg-yellow-500 text-black font-bold py-2 px-6 rounded-full hover:bg-yellow-600 transition-colors duration-300"
+            onClick={handleButtonClick}
+          >
+            Donate Now
+          </button>
+        </div>
+      </div>
+
       {/* Mission Statement Section */}
       <div className="w-full py-12 flex flex-col items-center bg-gray-100">
-        <div className="max-w-4xl flex flex-col md:flex-row items-center gap-8 px-4">
+        <div className="max-w-7xl flex flex-col md:flex-row items-center gap-8 px-4">
           <img
             src={missionImg}
             alt="Mission"
@@ -51,7 +73,7 @@ const Hero = () => {
 
       {/* Key Services Section */}
       <div className="w-full p-12 flex flex-col items-center bg-white">
-        <div className="max-w-4xl flex flex-col md:flex-row-reverse items-center gap-8">
+        <div className="max-w-7xl flex flex-col md:flex-row-reverse items-center gap-8">
           <img
             src={servicesImg}
             alt="Services"
