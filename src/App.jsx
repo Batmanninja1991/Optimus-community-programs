@@ -13,9 +13,9 @@ const App = () => {
   return (
     <div>
       <Navbar />
-      <Routes basename="/Optimus-community-programs">
+      <Routes>
         <Route index element={<Hero />} />
-        <Route path="/Optimus-community-programs" element={<Hero />} />
+        <Route path="/" element={<Hero />} />
         <Route path="/about" element={<About />} />
         <Route path="/programs" element={<Programs />} />
         <Route path="/activities" element={<Activities />} />
