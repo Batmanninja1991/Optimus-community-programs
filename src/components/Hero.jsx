@@ -5,7 +5,10 @@ import servicesImg from "../assets/holdingHands.jpg";
 
 const Hero = () => {
   const handleButtonClick = () => {
-    window.location.href = "https://donationwebsite.com";
+    window.open(
+      "https://www.facebook.com/profile.php?id=61560887934903",
+      "_blank"
+    );
   };
 
   return (
