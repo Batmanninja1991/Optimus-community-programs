@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="flex justify-center md:justify-start w-full md:w-auto mb-4 md:mb-0">
           <img src={logo} alt="Logo" className="w-[200px] rounded" />
         </div>
-        <div className="flex flex-col xl:flex-row items-center md:items-start gap-4 md:gap-8 xl:gap-16 w-full md:w-auto mb-4 md:mb-0 pl-8">
+        <div className="flex flex-col items-center md:items-start gap-4 md:gap-8 w-full md:w-auto mb-4 md:mb-0 pl-8">
           <a
             target="_blank"
             rel="noopener noreferrer"
